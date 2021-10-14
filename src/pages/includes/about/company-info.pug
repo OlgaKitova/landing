@@ -1,0 +1,46 @@
+main.main__contacts
+  section.contacts__title
+    .container
+      .contacts__major Contact Us
+      .contacts__paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  section.contacts__info
+    .container
+      .contacts__wrapper
+        .contacts__column
+          .contacts__img
+            img(src=".//img/about.png" alt="woman")
+          .contacts__information
+            .contacts__address
+              .contacts__chief Address
+              .contacts__graph Id convallis placerat sit sed duis id amet volutpat quam a, pharetra.
+            .contacts__phone
+              .contacts__chief Phone
+              ul.contacts__list
+                li.contacts__link.contacts__icon
+                  a(href="tel:6281273134321") +62-812-7313-4321
+                li.contacts__link.contacts__icon
+                  a(href="tel:628170001234") +62-817-000-1234
+            .contacts__service
+              .contacts__chief Online Service
+              ul.contacts__list
+                li.contacts__link.contacts__iconWWW
+                  a(href="https//www.afrianska.com") www.afrianska.com
+                li.contacts__link.contacts__iconMail
+                  a(href="mailto:hello.afrian@gmail.com") hello.afrian@gmail.com
+        .contacts__column
+          .contacts__form
+            h2.contacts__formTitle Send us message
+            form.contacts__formTotal(action="./sender/sender.php" method="POST" novalidate)
+              label(for="#name") Full Name
+              input#name(type="text" name="name" placeholder="Your Name")
+              label(for="#email") Email
+              input#email(type="email" name="email" placeholder="Your Email")
+              span.error(aria-live="polite")
+              label(for="#text") Message
+              textarea#text(name="message" placeholder="Your Message")
+              button.contacts__btn(type="submit") Submit
+            .statusAbout
+  section.contacts__map
+    .container
+      .map
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa5cc46781036088dcfd7fe16e64fec7c9b1644c20ae3f84ed4d3bd0b86fd56c5&amp;source=constructor" width="940" height="480" frameborder="0"></iframe>
