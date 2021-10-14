@@ -7,6 +7,10 @@ function burgerMenu (burger__name, menu__title) {
     showMenu()
   })
 
+  window.addEventListener('scroll', () => {
+    return window.scrollY  > 500  && burger.classList.contains('active') && showMenu()
+  })
+
   function showMenu() {
       burger.classList.toggle('active');
       menu.classList.toggle('active');

@@ -16,7 +16,9 @@ function modals (form__title, form__content, button) {
 
   function showModal() {
     modal.classList.add('show')
-   document.body.classList.add('overbody')
+   setTimeout(()=> {
+    document.body.classList.add('overbody')
+   }, 300)
   }
 
   function hideModal() {
