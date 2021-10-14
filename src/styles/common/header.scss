@@ -1,0 +1,112 @@
+
+/*Header*/
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+  }
+ &__wrapper {
+   max-width: 1230px;
+   margin: 0 auto;
+   padding: 0 15px;
+   height: 130px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+&__logo {
+  position: relative;
+  z-index: 7;
+}
+
+&__burger {
+  position: relative;
+  cursor: pointer;
+  width: 27px;
+  height: 16px;
+  z-index: 7;
+}
+
+&__burger span {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 24px;
+  height: 2px;
+  background: #356EAD;
+   transition: all 0.3s ease-in;
+}
+&__burger.active span {
+  display: none;
+}
+&__burger:before {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 24px;
+  height: 2px;
+  background: #356EAD;
+   transition: all 0.3s ease-in;
+}
+&__burger.active::before {
+  top: 0;
+transform: rotate(45deg);
+}
+&__burger:after {
+  display: block;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 24px;
+  height: 2px;
+  background: #356EAD;
+   transition: all 0.3s ease-in;
+}
+&__burger.active::after {
+  bottom: 2px;
+  transform: rotate(-45deg);
+}
+&__menu {
+  padding: 2rem 0;
+  position: absolute;
+  z-index: 6;
+  right:0;
+  top: -50vh;
+  width: 50vw;
+  background-color: rgba(53, 110, 173, 0.3);
+  border-radius: 5px;
+  transition: all 0.5s ease-in;
+}
+&__menu.active {
+  top: 0;
+  transition: all 0.5 ease-in;
+}
+&__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+&__link {
+  padding-bottom: 1rem;
+}
+&__link > a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+}
